@@ -20,7 +20,7 @@
   		<div class="well text-center">
       		<p>{{this.id}}. {{this.burger_name}}</p>
 
-      <form action="/update?_method=GET" method="POST">
+      <form action="/update?_method=PUT" method="POST">
 	      <input type="hidden" name="id" value="{{this.id}}">
 	      <button class="btn btn-danger center-block">Devour It!</button>
       </form>

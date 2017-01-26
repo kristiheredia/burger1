@@ -49,9 +49,9 @@ app.post('/update', function(req,res) {
   orm.updateOne('burgers', updateId, callback)
   function callback(data) {
     console.log(data)
-    res.redirect('/')
+    res.redirect('/update', {notEaten: data});
   }
-  res.render('index', {eaten: data});
+
 
 })
 //Serve static content for the app from the "public" directory in the application directory.
