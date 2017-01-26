@@ -22,12 +22,7 @@ var orm = {
         });
     },
 
-    // deleteInput: function(tableInput, idInput, fe) {
-    //     var queryString = 'DELETE FROM ' + tableInput + ' WHERE ?'
-    //     connection.query(queryString, {id: idInput}, function(err, result) {
-    //         fe(result);
-    //     });
-    // }
+  
 };
 
 module.exports = orm;

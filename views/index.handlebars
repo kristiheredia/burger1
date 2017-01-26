@@ -1,15 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
+<div class="container">		
+	<img class="center-block" width="165" height="175" src="assets/img/burger.png" />	
+		<h1 class="text-center">Eat-Da-Burger!</h1>	
 
-		<link rel="stylesheet" href="/css/style.css" type="text/css" />
-		<link rel="stylesheet" href="/css/bootstrap.min.css">
-		<script src="/css/jquery-2.0.0.min.js"></script>
-		<script src="/css/bootstrap.min.js"></script>
-		
-	<title>Eat-Da-Burger</title>
-</head>
-<body>
 
-</body>
-</html>
+	<form action="/create" method="post" role="form">
+		<div class="form-group">
+			<label for="">Enter a burger you want to eat <br> Click the "Make a Burger" button</label>
+			<hr>
+			<input type="text" class="form" id="burger" name="burger_name" size="50">
+		</div>
+
+			<button type="submit" class="btn btn-lg btn-primary submit center-block">Make a Burger!</button>
+	</form>
+	 
+	<hr>
+
+	<div class="col-sm-4 col-sm-offset-2"> Burgers not eaten:
+  			{{#each notEaten}}
+  		<div class="well text-center">
+      		<p>{{this.id}}. {{this.burger_name}}</p>
+
+      <form action="/update?_method=GET" method="POST">
+	      <input type="hidden" name="id" value="{{this.id}}">
+	      <button class="btn btn-danger center-block">Devour It!</button>
+      </form>
+  
+	</div>
+  		{{/each}}
+  	</div>
+
+  	<div class="col-sm-4 col-sm-offset-2"> Burgers DEVOURED:
+		<ul>
+			{{#each eaten}}
+			 	<li>{{burger_name}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
+
+<script>
+	$(".submit").on("click", function(e) {
+	})
+</script>
