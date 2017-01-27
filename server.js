@@ -21,13 +21,13 @@ app.set('view engine', 'handlebars');
 app.get('/', function(req,res) {
   orm.selectAll('burgers', callback);
   function callback(data) {
-    console.log(data)
+    console.log("get burger data: ", data);
     // Is the burger devoured?
-    data.forEach(function(value,index) {
-      if (value.devoured === 1) {
-        console.log('yummy')
-      }
-    })
+    // data.forEach(function(value,index) {
+    //   if (value.devoured === 1) {
+    //     console.log('yummy')
+    //   }
+    // })
     res.render('index', {notEaten: data});
   }
 })
