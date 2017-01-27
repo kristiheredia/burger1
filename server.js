@@ -17,12 +17,12 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-
+//routes
 app.get('/', function(req,res) {
   orm.selectAll('burgers', callback);
   function callback(data) {
     console.log(data)
-    //Is burger devoured?
+    //Is the burger devoured?
     data.forEach(function(value,index) {
       if (value.devoured === 1) {
         console.log('yummy')
@@ -54,7 +54,7 @@ app.post('/update', function(req,res) {
 
 
 })
-//Serve static content for the app from the "public" directory in the application directory.
+//static content
 app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT, function() {
