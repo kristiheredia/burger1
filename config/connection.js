@@ -8,7 +8,7 @@ var mysql = require('mysql');
 // })
 
 var connection = mysql.createConnection({
-    host: 'mysql://rrzo5uvqkg9ou3z4:psv6i2qnbf3ercre@wp433upk59nnhpoh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/tqgvvcx98zoxayrf',
+    host: 'wp433upk59nnhpoh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     user: 'rrzo5uvqkg9ou3z4',
     password: 'psv6i2qnbf3ercre',
     database: 'burgers_db'
