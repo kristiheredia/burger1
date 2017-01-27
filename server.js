@@ -27,8 +27,7 @@ app.get('/', function(req,res) {
     //   if (value.devoured === 1) {
     //     console.log('yummy')
     //   }
-    // }
-    )
+    // })
     res.render('index', {notEaten: data});
   }
 })
